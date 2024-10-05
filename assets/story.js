@@ -30,7 +30,19 @@ if (path1 === "evet") {
 
     console.log("Atini kuzeye ceviriyorsun. Şehre ulasmana az kalmis olabilir. Şu an dinlenmenin sirasi değil!");
 
-    prompt("sehre geldin.")
+    path2_2 = prompt("sehre geldin. Çok aç ve yorgun hissediyorsun. Tam bir han bulmuşken kapida bir adam sana mektup uzatiyor. Mektupta Horadrim kardesliginin seni cagirdigi yaziyor. Biraz dinlenmek mi yoksa Horadrim'in davetini kabul etmek mi istersin? ")
+    
+    if(path2_2 === "dinlen") {
+        console.log("Dinlenmenin iyi bir fikir oldugunu düsünüp en yakin han'a giriyorsun. Sonraki gün icin oyun kaydediliyor :D ");
+    }else if (path2_2 === "git") {
+        console.log ("Mektupta yazili olan yere gidiyorsun. Seni karsilayan içlerindeki en yasli kişi oluyor." + `hosgeldin ${adventurerName} burada neden oldugunu anlamis olmalisin. Öncelikle kendimi tanitayim. Ben Methem, Horadrim üyelerindenim. Uzun süredir diğer üyelerden bazi seylerin ters gittiği hakkinda rapor aliyoruz. Kücük bir sehrin ansizin kayboldugu bilgisine ulastik. Üyelerimizden iki kisi göndermemize rağmen geri dönmediler. Korktugumuz senaryo basimiza gelmiş olabilir. Gök haritasi felaketi gösteriyor` );
+        path3 = prompt ("Senin bizim icin bir ekip üyemiz ile bu kaybolan sehre gitmeni istiyoruz. Bunun karsiliginda cömertce ödüllendirileceksin. Kabul etmezsen ve korktugumuz senaryo basimiza gelirse bu durumdan pismanlik duyacagina eminim. İçindeki merak ve Methem'in bu sözlerinden sonra kaybolmus sehre gitme karari aliyorsun")
+        if(path3 === "yola cik") {
+            console.log("yola cikmak icin atini ve silahlarini hazirliyorsun, biraz dinlenip horadrim üyesi ile birlikte yola cikiyorsun")
+        } else (alert("hikaye ilerlemesi icin tek secenek 'yola cik' "))
+
+    }
+        
 
 } else {
     alert ("Lütfen gecerli bir hamle yap!")
