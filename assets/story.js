@@ -15,7 +15,7 @@ if (path1 === "evet") {
 
     if (path1_2 === "saldir") {
         if (adventurerPower > banditPower) {
-                console.log("Son haydutu katlettiginde ölmeden önce sana bakiyor." + `Seni hatirladim, sen ${adventurerName} 'sin. Haydutun göz bebekleri yavas yavas büyürken sen de genc kizin iyi oldugunu düsünüp atina dogru ilerliyorsun. Köyden ayrilip sehire dogru yola cikiyorsun. Umarim yolda yiyecek bulabilirsin`);
+                console.log("Son haydutu katlettiginde ölmeden önce sana bakiyor." + `Seni hatirladim, sen ${adventurerName} 'sin. Haydutun göz bebekleri yavas yavas büyürken sen de genc kizin iyi oldugunu düsünüp atina dogru ilerliyorsun. Köyden ayrilip sehre dogru yola cikiyorsun. Umarim yolda yiyecek bulabilirsin`);
         }else if (banditPower >= adventurerPower) {
                 console.log("Ne kadar güclü olsan da haydurlarin sayisi karsisinda bir sansin kalmiyor.");
         }else 
