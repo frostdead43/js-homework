@@ -6,6 +6,16 @@ let bandits = "Haydutlar";
 
 let banditPower = Math.floor(Math.random()* 6);
 
+let monster =  "Galdûrûn";
+
+let monsterPower = Math.floor(Math.random() * (14 - 10 + 1)) + 10;
+
+let companion = prompt("Part 3' de sana eslik edecek yoldasinin ismini yaz!");
+
+let companionPower = Math.floor(Math.random() * (8 - 4 + 1)) + 4;
+
+
+
 let path1 = prompt("Tüm gün boyunca at sürdüğün için kendini yorgun hissediyorsun. Uzaklarda bir köyden dumanlar çiktigini gördün. Bu senin için dinlenme firsati olabilir. Köye dogru atini sürmek istiyor musun? ")
 
 if (path1 === "evet") {
@@ -41,8 +51,23 @@ if (path1 === "evet") {
             console.log("yola cikmak icin atini ve silahlarini hazirliyorsun, biraz dinlenip horadrim üyesi ile birlikte yola cikiyorsun")
         } else (alert("hikaye ilerlemesi icin tek secenek 'yola cik' "))
 
-    }
+        console.log("Şehrin cikisinda genc bir savasci görüyorsun. Sarisin uzun saclari gün batiminda altin renginde parildiyor. Yasi genc olmasina karsin ne kadar bilgiye sahip oldugunu tahmin edebiliyorsun Seni görüyor ve yanina gelip kendini tanitiyor:" +  `Seninle tanismayi sabirsizlikla bekliyordum. Ben ${companion}. Horadrim'in en genc üyesiyim. Dünyada cok garip seyler olmaya basladi. Gidip su sehirde neler oluyor bir bakalim. ` )
+
+        path3_1 = prompt ("Kaybolmus sehre geldiginizde gercekten de sehrin yerinde olmadigini görüyorsun. Sanki tüm sehirdeki binalar yok olmuscasina yerlerinde yoklar. Sanki karanlik burada daha güclü gibi görünüyor. Meşale bile korkudan sönecekmişcesine yaniyor. Ama burada eskiden bir sehrin olduguna dair izler görüyorsun. Cesetler ve burada yasayan halkin yaptigi bir meydan. Ne oldugunu anlamadan karanliktan üstünüze dogru bir yaratik saldiriyor. Son anda yana cekilerek bu atagi savusturuyorsunuz. Karsinda devasa büyüklükte, yarasa ve at karisimi, metrelerce büyüklükte kanatlari olan bir yaratik var! Sen ne olup bittigini anlamaya calisirken" + `${companion} saskinlikla:'Bu olamaz! Galdûrûn!! Bu yaratik sadece eski efsanelerde var. Karanlikla birlikte hepsi yok edilmisti. Bu nasil olur' diyor. Bu esnada yaratik kana susamiscasina tekrar saldiriya geciyor. Çabuk karar vermeniz gerekiyor. Ne yapacaksiniz? `)
+
+        if (path3_1 === "saldir") {
+            if ( (adventurerPower + companionPower) >= monsterPower) {
+                console.log ("Saatler süren savasin ardindan canavari alt ediyorsunuz. Canavar son bir hamleyle ucmayi basariyor ama agir yaralarla uzaklasmasi imkansiz. Sizin de yaralarinizdan dolayi hareket edecek gücünüz kalmadigi icin Galdûrûn'u takip etmemeye karar veriyorsunuz. Yasadiklarin sana bir rüya gibi geliyor. Cocuk masallarindaki canavarlardan biriyle savastigina inanamiyorsun.")
+            } else if ( (adventurerPower + companionPower) < monsterPower ) {
+                console.log (`Kiliclariniz ve diger silahlariniz Galdûrûn'e karsi etkisiz kaliyor. Önce ${companion} cansiz sekilde topraga düserken senin icin de niahi son geliyor. Efsanelerde anlatilan karanligin dönüsüne ilk sahitlik edenler oluyorsunuz. Ama bunu anlatacak kadar hayatta kalamiyorsunuz...`)
+                alert("Basarisiz oldun! Tekrar Dene!")
+            }
         
+        } else if (path3_1 === "kac") {
+            console.log ("Bu canavari tek basiniza alt etmenin mümkün olmadigini düsünüyorsunuz. Bulabildiginiz kadar savasci toplayip dönmek üzere sehri terk edip geri dönüyorsunuz")
+        }
+            
+    }
 
 } else {
     alert ("Lütfen gecerli bir hamle yap!")
