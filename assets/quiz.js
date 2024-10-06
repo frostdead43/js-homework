@@ -66,7 +66,7 @@ if (quiz4 === "7446")  {
 
 quiz5 = prompt ("Kurtlar vadisi dizisinde Süleyman Cakir kacinci bölümde vurulmus, kacinci bölümde ölmüştür?");
 
-if (quiz5 === "43" || "45" )  {
+if (quiz5 === "43" || quiz5 === "45" )  {
     alert("Dogru, 20 yil gecti...");
     rightAnswer += 1;
 
@@ -78,9 +78,9 @@ if (quiz5 === "43" || "45" )  {
 
 //6.soru
 
-quiz6 = prompt ("Dolunayimi + bassarken yaktim diyen bir oyuncu hangi oyunu oyundan bahsediyordur?");
+quiz6 = prompt ("Dolunayimi + basarken yaktim diyen bir oyuncu hangi oyunu oyundan bahsediyordur?");
 
-if (quiz5.toLowerCase() === "metin2" )  {
+if (quiz6.toLowerCase() === "metiniki" || quiz6.toLowerCase() === "metin2" )  {
     alert("Dogru, Demirci alnini silerken + bas yanmaz");
     rightAnswer += 1;
 
@@ -94,7 +94,7 @@ if (quiz5.toLowerCase() === "metin2" )  {
 
 quiz7 = prompt ("3 büyüklere gelmiş en cirkef futbolcudan birini söyleyin");
 
-if (quiz5.toLowerCase() === "melo" || "emre belözoğlu" || "caner erkin" || "hasan şaş" )  {
+if (quiz5.toLowerCase() === "melo" || quiz5.toLowerCase() === "emre belözoğlu" || quiz5.toLowerCase() === "caner erkin" ||quiz5.toLowerCase() === "hasan şaş" )  {
     alert("Dogru");
     rightAnswer += 1;
 
@@ -104,7 +104,103 @@ if (quiz5.toLowerCase() === "melo" || "emre belözoğlu" || "caner erkin" || "ha
     wrongAnswer += 1;
 }
 
+
+// 8.soru 
+
+quiz8 = prompt ("Gibi dizisinde ilkkan  karakterinin soyadi nedir ? ");
+
+if (quiz8.toLowerCase() === "yedinci" )  {
+    alert("Dogru, İlkkan Yedinci ya da biz ona kuki de diyebiliriz");
+    rightAnswer += 1;
+
+}else {
+
+    alert("Yanlis, 'yedinci (7th)' ");
+    wrongAnswer += 1;
+}
+
+//9.soru
+
+quiz9 = prompt ("Yüksek sadakat grubu isimlerinin aksine kaç adet solist degistirmiştir");
+
+
+if (quiz9 === "4" )  {
+    alert("Dogru, 4 solist degistirdiler. Güncel solistleri 'Kenan Vuraldir' ");
+    rightAnswer += 1;
+
+}else {
+
+    alert("Yanlis, 4,4,4,4 ");
+    wrongAnswer += 1;
+}
+
+
+//10.soru
+
+let quiz10 = prompt("Nihat ve Orhan Hocalar candir degil mi? (tek cevap <3)");
+
+if (quiz10 === "<3" )  {
+    alert("Kral hocalar, seviyoruz <3");
+    rightAnswer += 1;
+
+} else if (quiz10 === "evet") {
+    alert("Kral hocalar, seviyoruz <3");
+    rightAnswer += 1;
+    
+} else if (quiz10 === "tabiki") {
+    alert("Kral hocalar, seviyoruz <3");
+    rightAnswer += 1;
+
+} else if (quiz10 === "soru mu simdi bu?") {
+    alert("Kral hocalar, seviyoruz <3");
+    rightAnswer += 1;
+
+} else if (quiz10 === "Ofc we are!") {
+    alert("Kral hocalar, seviyoruz <3");
+    rightAnswer += 1;
+
+} else if (quiz10 === " :) ") {
+    alert("Kral hocalar, seviyoruz <3");
+    rightAnswer += 1;
+
+} else if (quiz10 === " はい ") {
+    alert("Kral hocalar, seviyoruz <3");
+    rightAnswer += 1;
+
+} else if (quiz10 === " hayir ") {
+    alert("Savciliga verildiniz!!");
+    wrongAnswer += 1;
+}
+
+
+
 console.log(rightAnswer);
 
 console.log(wrongAnswer);
 
+
+if (rightAnswer > 10) {
+    alert("Ben yapamadim 10 tane vallahi bravo");
+    window.location.href = "https://www.youtube.com/watch?v=jAWU-YXJnhM";  //bu kod maalesef chatgpt den arak 
+    console.log(rightAnswer);
+
+} else if (rightAnswer >=6 && rightAnswer<10) {
+    alert("Güzel sonuc. Bence güzel");
+    window.location.href = "https://www.youtube.com/watch?v=tY-PT0ND0uk";
+    console.log(rightAnswer);
+
+} else if (rightAnswer >=4 && rightAnswer<6) {
+    alert("Vasatin üstü");
+    window.location.href = "https://www.youtube.com/watch?v=MVROBI-MHhY";
+    console.log(rightAnswer);
+
+} else if (rightAnswer >=1 && rightAnswer<4)  {
+    alert("Tadim tuzum yok, bunadlim..");
+    window.location.href = "https://www.youtube.com/watch?v=GPwyJz5Yt8U";
+    console.log(rightAnswer);
+
+}else if (rightAnswer === 0) {
+    alert("Bari son soruyu dogru yapsaydin..");
+    window.location.href = "https://www.youtube.com/watch?v=nQsSkEDe7_M";
+    console.log(rightAnswer);
+}
